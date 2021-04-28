@@ -1,0 +1,295 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Common */
+.clear {
+    clear: both;
+}
+
+.text-white{
+    color: #fff !important;
+}
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+html{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+}
+/* Main */
+#main{
+
+}
+
+#header{
+height: 46px;
+background-color: #000;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 1;
+}
+
+#nav{
+    display: inline-block;
+}
+
+#nav, .subnav {
+    list-style-type: none;
+}
+
+#nav > li{
+    display: inline-block;
+}
+
+#nav li{
+    position: relative;
+}
+
+#nav > li > a{
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#nav li a{
+    
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+    
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav > li:hover > a,
+#nav .subnav li:hover a {
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav .subnav {
+    display:none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    top: 100%;
+    left: 0;
+}
+
+#nav .subnav a{
+    line-height: 38px;
+    padding: 12px;
+    color: #000;
+}
+
+#nav .nav-arrow-down{
+    font-size: 14px;
+}
+
+#header .search-btn{
+    float: right;
+    padding: 0 21px;
+    
+}
+#header .search-btn:hover{
+    cursor: pointer;
+    background-color: #f44336;
+}
+
+#header .search-icon{
+    display: #fff;
+    font-size: 22px;
+    line-height: 44px;
+}
+
+#slider{
+    min-height: 500px;
+    background-color: green;
+    margin-top: 46px;
+    background: url('/assets/img/slider/slider1.png') top center/ cover no-repeat;
+}
+.ti-search:before {
+    content: "\e610";
+    color: #fff;
+}
+#slider .text-content{
+    position: absolute;
+    color: #fff;
+    bottom: 200px;
+    /* One way to center 
+    left: 50%;
+    transform: translateX(-50%); */
+    width: 100%;
+    text-align: center;
+}
+#slider .text-heading{
+    font-weight: 500;
+    font-size: 24px;
+}
+#slider .text-description{
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+#content{
+height: 2000px;
+background: white;
+}
+
+#content .section-heading{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+
+#content .section-sub-heading{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+#content .content-section{
+    width: 800px;
+    padding: 64px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content .about-text{
+    font-size: 14px;
+    margin-top: 15px;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+#content .member-list{
+    margin-top: 48px;
+}
+
+#content .member-item{
+    width: calc(100%/3);
+    float: left;
+    text-align: center;
+}
+
+#content .member-name{
+    padding-top: 25px;
+    font-size: 15px;
+}
+
+#content .member-img{
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+/* Gaming Date Section */
+.gaming-date-section{
+    background-color: #000;
+}
+.ticket-list{
+    list-style: none;
+    margin-top: 40px;
+    background-color: #fff;
+}
+
+.ticket-list li{
+    color: #75757575;
+    font-size: 15px;
+    padding: 11px 16px;
+    border: 1px solid #ddd;
+}
+
+.ticket-list .sold-out{
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 3px;
+    margin-left: 16px;
+}
+
+.ticket-list .quantity{
+    background: #000;
+    float: right;
+    width: 24px;
+    height: 24px;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -3px;
+}
+
+/* Places */
+.places-list{
+    /* margin-top: 32px;
+    margin-left: -8px;
+    margin-right: -8px; */
+
+    margin: 32px -8px 0;
+    padding-bottom: 32px;
+}
+.place-item{
+    float: left;
+    width: calc(100%/3);
+    padding: 0 8px;
+}
+.place-img{
+width: 100%;
+display: block;
+}
+
+.place-img:hover{
+    opacity: 0.6;
+}
+
+.place-body{
+    padding: 16px;
+    font-size: 15px;
+    background-color: #fff;
+}
+.place-heading{
+    font-size: 15px;
+    font-weight: 600;
+}
+.place-time{
+    margin-top: 15px;
+    color: #75757575;
+}
+.place-desc{
+    margin-top: 15px;
+    line-height: 1.6;
+}
+.place-buy-btn{
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px ;
+}
+.place-buy-btn:hover{
+    color: #000;
+    background-color: #ccc;
+}
+/* Footer Section */
+
+#footer{
+
+}
