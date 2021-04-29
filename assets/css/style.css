@@ -58,6 +58,7 @@
     margin-top: 15px ;
     border: none;
     text-align: center;
+    -webkit-appearance: none;
 }
 .btn:hover{
     cursor: pointer;
@@ -393,6 +394,10 @@ display: block;
     border: 1px solid #000;
     padding: 10px 16px;
     float: right;
+}
+
+.contact-submit-btn{
+    font-size: 18px;
 }
 
 /* Map Section */
