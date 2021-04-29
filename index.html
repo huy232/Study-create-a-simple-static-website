@@ -7,6 +7,7 @@
     <title>The Game</title>
     <link rel="icon" href="./assets/img/title-icon/icon.png" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
 </head>
 <body>
@@ -32,11 +33,15 @@
             </ul>
             <!-- End nav -->
 
-            <!-- Begin search -->
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div>
+
+            <!-- Search -->
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
             </div>
-            <!-- End search -->
         </div>
 
         <div id="slider">
@@ -61,19 +66,19 @@
                 </p>
 
                 <div class="row members-list">
-                    <div class="col col-third text-center">
+                    <div class="col col-third s-col-full mt-16 text-center">
                         <p class="member-name">
                             Name
                         </p>
                         <img src="./assets/img/game/member4.jpg" alt="Member" class="member-img">
                     </div>
-                    <div class="col col-third text-center">
+                    <div class="col col-third s-col-full mt-16 text-center">
                         <p class="member-name">
                             Name
                         </p>
                         <img src="./assets/img/game/member4.jpg" alt="Member" class="member-img">
                     </div>
-                    <div class="col col-third text-center">
+                    <div class="col col-third s-col-full mt-16 text-center">
                         <p class="member-name">
                             Name
                         </p>
@@ -99,34 +104,34 @@
 
             <!-- Place section -->
             <div class="row places-list">
-                <div class="col col-third">
+                <div class="col col-third s-col-full mt-16">
                     <img src="./assets/img/places/place1.jpg" alt="New York"
                     , class="place-img">
                     <div class="place-body">
                         <h3 class="place-heading">New York</h3>
                         <p class="place-time">Fri 27 Nov 2021</p>
                         <p class="place-desc">Present description</p>
-                        <a href="#" class="btn">Buy Ticket</a>
+                        <a href="#" class="btn s-full-width">Buy Ticket</a>
                     </div>
                 </div>
-                <div class="col col-third">
+                <div class="col col-third s-col-full mt-16">
                     <img src="./assets/img/places/place2.jpg" alt="Paris"
                     , class="place-img">
                     <div class="place-body">
                         <h3 class="place-heading">New York</h3>
                         <p class="place-time">Fri 28 Nov 2021</p>
                         <p class="place-desc">Present description</p>
-                        <a href="#" class="btn">Buy Ticket</a>
+                        <a href="#" class="btn s-full-width">Buy Ticket</a>
                     </div>
                 </div>
-                <div class="col col-third">
+                <div class="col col-third s-col-full mt-16">
                     <img src="./assets/img/places/place3.jpg" alt="San Francisco"
                     , class="place-img">
                     <div class="place-body">
                         <h3 class="place-heading">San Francisco</h3>
                         <p class="place-time">Fri 29 Nov 2021</p>
                         <p class="place-desc">Present description</p>
-                        <a href="#" class="btn">Buy Ticket</a>
+                        <a href="#" class="btn s-full-width">Buy Ticket</a>
                     </div>
                 </div>
                 </div>
@@ -142,18 +147,18 @@
                     Drop a bombing shell into our message
                 </p>
                 <div class="row contact-content">
-                    <div class="col col-half contact-info">
+                    <div class="col col-half s-col-full contact-info">
                         <p> <i class="ti-location-pin"></i>Chicago, US </p>
-                        <p> <i class="ti-mobile"></i>Phone: 0971225101 </p>
-                        <p> <i class="ti-email"></i>Email: thaigiahuy230299@gmail.com </p>
+                        <p> <i class="ti-mobile"></i>Phone: <a href="tel: 0971225101">0971225101</a> </p>
+                        <p> <i class="ti-email"></i>Email: <a href="mailto: thaigiahuy230299@gmail.com">thaigiahuy230299@gmail.com</a></p>
                     </div>
-                    <div class="col col-half contact-form">
+                    <div class="col col-half s-col-full contact-form">
                         <form action="">
                             <div class="row">
-                                <div class="col col-half">
+                                <div class="col col-half s-col-full">
                                     <input type="text" name="" placeholder="Name" required id="" class="form-control">
                                 </div>
-                                <div class="col col-half">
+                                <div class="col col-half s-col-full s-mt-8">
                                     <input type="email" name="" placeholder="Email" required id="" class="form-control">
                                 </div>
                             </div>
@@ -162,7 +167,7 @@
                                     <input type="text" name="" placeholder="Message" required id="" class="form-control">
                                 </div>
                             </div>
-                            <input class="pull-right btn mt-16" type="submit" value="SEND">
+                            <input class="pull-right btn mt-16 s-full-width" type="submit" value="SEND">
                         </form>
                     </div>
                 </div>
@@ -184,5 +189,41 @@
             <p class="copyright">Powered by <a href="">w3.css</a></p>
         </div>
     </div>
+    <script>
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight= header.clientHeight;
+        
+        // Close, open Menu
+        mobileMenu.onclick = function(){
+            var isClosed = header.clientHeight === headerHeight;
+            if(isClosed){
+                header.style.height = 'auto';
+            }
+            else{
+                header.style.height = null;
+            }
+        }
+        // mobile-menu
+
+        // Automatically close when choosing menu
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for(var i = 0; i<menuItems.length; i++)
+        {
+            
+            var menuItem = menuItems[i];
+            menuItem.onclick = function(){
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if(isParentMenu){
+                    event.preventDefault();
+                }
+                else {
+                    header.style.height=null
+                }
+            } 
+        }
+
+
+    </script>
 </body>
 </html>
